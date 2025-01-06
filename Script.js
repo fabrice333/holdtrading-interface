@@ -1,11 +1,21 @@
-// Initialer Live-Counter
-let userCount = 1542;
+// Dynamische Botschaften basierend auf der Tageszeit
+const messages = {
+    morning: "☀️ Starte deinen Tag mit dem besten Signal!",
+    afternoon: "🚀 Lass dein Geld für dich arbeiten!",
+    evening: "🌙 Beende deinen Tag mit einem Gewinn!"
+};
 
-function incrementCounter() {
-    const counterElement = document.getElementById('userCount');
-    userCount += Math.floor(Math.random() * 5) + 1;
-    counterElement.textContent = userCount;
+// Funktion zur Auswahl der Botschaft basierend auf der Uhrzeit
+function getDynamicMessage() {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+        return messages.morning;
+    } else if (hour < 18) {
+        return messages.afternoon;
+    } else {
+        return messages.evening;
+    }
 }
 
-// Counter alle 5 Sekunden erhöhen
-setInterval(incrementCounter, 5000);
+// Setze die dynamische Botschaft
+document.getElementById('dynamicMessage').innerText = getDynamicMessage();
