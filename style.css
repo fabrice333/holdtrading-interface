@@ -1,65 +1,66 @@
-/* General Reset */
-* {
+/* Allgemeine Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
     font-family: 'Arial', sans-serif;
-    overflow: hidden;
+    background-color: #f5f5f5;
 }
 
-.content {
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff7f00;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: none;
+    width: 90%;
+    max-width: 400px;
 }
 
 .logo {
-    width: 80%;
-    max-width: 250px;
-    height: auto;
+    width: 100px;
     margin-bottom: 20px;
 }
 
-.glitch-text {
-    font-size: 4rem;
-    color: #fff;
-    text-transform: uppercase;
-    animation: glitch 1.5s infinite;
+h1 {
+    color: #ffffff;
+    font-size: 24px;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #ff5733;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(255, 87, 51, 0.7);
-    animation: pulse 1.5s infinite;
+p {
+    color: #ffffff;
+    font-size: 16px;
 }
 
-.cta-button:hover {
-    background: #ff784e;
+#joinButton {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
 }
 
-/* Glitch Animation */
-@keyframes glitch {
-    0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffea; }
-    50% { text-shadow: -2px 2px #00ffea, 2px -2px #ff0000; }
-    100% { text-shadow: 2px -2px #ff0000, -2px 2px #00ffea; }
+#joinButton:hover {
+    background-color: #333333;
 }
 
-/* Pulse Animation */
+/* Button Animation */
 @keyframes pulse {
-    0% { box-shadow: 0 0 10px rgba(255, 87, 51, 0.7); }
-    50% { box-shadow: 0 0 30px rgba(255, 87, 51, 1); }
-    100% { box-shadow: 0 0 10px rgba(255, 87, 51, 0.7); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
