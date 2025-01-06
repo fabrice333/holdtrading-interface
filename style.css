@@ -17,26 +17,33 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: none;
     width: 90%;
     max-width: 400px;
+    display: none;
 }
 
+/* Logo Style */
 .logo {
-    width: 100px;
+    width: 80px;
+    height: auto;
     margin-bottom: 20px;
 }
 
+/* Überschrift Style */
 h1 {
     color: #ffffff;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
+/* Absatz Style */
 p {
     color: #ffffff;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
+/* Button Style */
 #joinButton {
     background-color: #000000;
     color: #ffffff;
@@ -58,7 +65,7 @@ p {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     100% {
         transform: scale(1);
